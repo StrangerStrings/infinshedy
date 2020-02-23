@@ -6,17 +6,21 @@ let ballPos = {
 const ball = document.getElementById('ball')
 const main = document.getElementById("main")
 
+let createRipple = true
+
 begin()
 
 function begin () {
     setInterval(()=>{
-        calculateBallPosX()
-        calculateBallPosY()
+        calculateBallPos()
         setBallPos(ball)
-        createTempBall('ball1')
-        createTempBall('ball2')
-        createTempBall('ball3')
-        createTempBall('ball4')
+        if (createRipple){
+            createTempBall('ball1')
+            createTempBall('ball2')
+            createTempBall('ball3')
+            createTempBall('ball4')
+        }
+        createRipple = !createRipple
     },200)
 } 
 
@@ -27,15 +31,13 @@ function setBallPos(div) {
         `
 }
 
-let xSpeed = 20
-let ySpeed = 30
+let xSpeed = 10
+let ySpeed = 15
 
-function calculateBallPosX() {
-    xSpeed -= ballPos.x/5
+function calculateBallPos() {
+    xSpeed -= ballPos.x/12
     ballPos.x += xSpeed
-}
-function calculateBallPosY() {
-    ySpeed -= ballPos.y/1.315
+    ySpeed -= ballPos.y/3.06
     ballPos.y += ySpeed
 }
 
@@ -49,8 +51,8 @@ function createTempBall(ballType) {
         },10)
         setTimeout(() => {
             main.removeChild(extraBall);
-        },1000)
-    }, 200)
+        },1600)
+    }, 220)
 }
 
 
