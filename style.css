@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding:0;
+}
+#main{
+    overflow: hidden;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+
+div > div{
+    position: absolute;
+    border-radius: 50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    opacity: 1;
+    transition: 
+        background-color 0.9s ease-out,
+        opacity 0.9s ease-out,
+        height 0.9s ease-in,
+        width 0.9s ease-in,
+        left 0.2s linear,
+        top 0.2s linear
+        ;
+    -webkit-user-drag: none;
+    height: 6vw;
+    width: 6vw;
+}
+
+.ball1{
+    opacity: 0;
+    height: 1vw;
+    width: 1vw;
+    z-index: 5;
+}
+.ball2{
+    opacity: 0;
+    height: 15vw;
+    width: 15vw;
+    background-color: aqua;
+    z-index: 4;
+}
+.ball3{
+    opacity: 0;
+    height: 22vw;
+    width: 22vw;
+    background-color: purple;
+    z-index: 3;
+}
+.ball4{
+    opacity: 0;
+    height: 35vw;
+    width: 35vw;
+    background-color:crimson;
+    z-index: 2;
+}
