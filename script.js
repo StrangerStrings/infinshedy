@@ -1,8 +1,8 @@
-let xSpeed = 10
-let ySpeed = 15
-const xAccelaration = 0.833
-const yAccelaration = 3.27
-const rippleRate = 3 // lower means more frequent
+let xSpeed = 4
+let ySpeed = 8
+const xAccelaration = 0.013
+const yAccelaration = 0.05182
+const rippleRate = 12 // lower means more frequent
 
 let ballPos = {x:0, y:0}
 const ball = document.getElementById('ball')
@@ -24,13 +24,13 @@ function begin () {
             createRipple = rippleRate
         }
         createRipple --
-    },200)
+    },60)
 } 
 
 function moveBall() {
-    xSpeed -= ballPos.x * xAccelaration/10
+    xSpeed -= ballPos.x * xAccelaration
     ballPos.x += xSpeed
-    ySpeed -= ballPos.y * yAccelaration/10
+    ySpeed -= ballPos.y * yAccelaration
     ballPos.y += ySpeed
 }
 
@@ -52,5 +52,5 @@ function createTempDiv(divType) {
         setTimeout(() => {
             main.removeChild(extraBall);
         },1600)
-    }, 220)
+    }, 63)
 }

@@ -20,7 +20,7 @@ h1, div > div{
 h1{
     color: crimson;
     opacity: 0.065;
-    font-size: 25em;
+    font-size: 25vw;
 }
 
 div > div{
@@ -28,8 +28,8 @@ div > div{
     background-color: white;
     opacity: 1;
     transition: 
-        left 0.2s linear,
-        top 0.2s linear,
+        left 0.06s linear,
+        top 0.06s linear,
         width 1.5s ease-in,
         height 1.5s ease-in,
         opacity 1.5s ease-out,
@@ -38,17 +38,18 @@ div > div{
     width: 6vw;
 }
 
-.ripple-1, .ripple-2, .ripple-3, .ripple-4{
-    opacity: 0;
-}
 .ripple-1{
+    opacity: 0.3;
     height: 0vw;
     width: 0vw;
     z-index: 5;
 }
+.ripple-2, .ripple-3, .ripple-4{
+    opacity: 0;
+}
 .ripple-2{
-    height: 15vw;
-    width: 15vw;
+    height: 13.5vw;
+    width: 13.5vw;
     background-color: aqua;
     z-index: 4;
 }
@@ -59,8 +60,8 @@ div > div{
     z-index: 3;
 }
 .ripple-4{
-    height: 35vw;
-    width: 35vw;
+    height: 37vw;
+    width: 37vw;
     background-color:crimson;
     z-index: 2;
 }
